@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        header{
+           background-image: url(wide.jpeg);
+           height: 100px;
+           text-align: center;
+           padding: 50px;
+           font-size: 40px;
+        }
+        footer{
+            padding: 10px;
+            padding-bottom: 10px;
+            background-color: black;
+             color: azure ;text-align: center;
+        padding: 10px; padding-bottom: 50px;
+            height: 20px; font-size: 20px; 
+        }
+        #d1{
+            background-image: url(reser.jpeg); background-size: cover;
+            height: 800px;
+        }
+        #d2{
+            background-color: rgba(247, 239, 198, 0.555);
+            width: 50%; 
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            padding: 40px;
+            text-align: left;
+        }
+        label{
+            display: block;
+            margin-top: 10px;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input[type=text], input[type="email"], input[type="phone"],input[type="date"],
+        input[type="time"],input[type="guests"],input[type="special-requests"],select{
+            width: 100%; height: 40px; margin: 2px; border: none;
+        }
+        textarea{
+            width: 100%;
+        }
+        input[type="submit"]{
+            background-color: red; color: white;
+            font-weight: bold; padding: 10px;
+            border-radius: 10px;}
+            input[type="submit"]:hover{
+            background-color: rgb(102, 6,6);
+            transform: scale(1.05); cursor:pointer}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white; margin-top: 10px;"  >Welcome to Silver Spoons</h1>
+        
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="team.html" >Our Team</a></li>
+            <li><a href="events.html" style="border-right: none; width: 192px;">Events</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <div id="d1"><center>
+        <div id="d2">
+            <form id="myform">
+            
+                <label for="name">Name:</label> 
+                <input type="text" name="name" id="name"
+                placeholder="Full Name">
+                <br><br>
+                <label for="email">Email:</label> 
+                <input type="email" name="email" id="email"
+                placeholder="Email">
+                <br><br>
+                <label for="phone">Phone:</label> 
+                <input type="phone" name="phone" id="phone"
+                placeholder="Phone">
+                <br><br>
+                <label for="date">Date:</label> 
+                <input type="date" name="date" id="date">
+                <br><br>
+                <label for="time">Time:</label>
+        <select name="time"  id="time" >
+            <option value="">Select Time</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+            <option value="8:00 PM">8:00 PM</option>
+        </select><br><br>
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests"><br><br>
+        <label for="special-requests">Special Requests:</label>
+        <textarea name="special-requests" id="special-requests"></textarea>
+        <br><br>
+            <input type="submit" value="Make Reservation">
+
+            </form>
+            <script>
+               function sub(){
+            var isvalid = true;
+            if(document.getElementById('name').value==""){
+                document.getElementById('nameerror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('nameerror').innerText = "";
+            }
+            if(document.getElementById('email').value==""){
+                document.getElementById('emailerror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('emailerror').innerText = "";
+            }
+            if(document.getElementById('phone').value==""){
+                document.getElementById('phoneerror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('emailerror').innerText = "";
+            }
+            if(document.getElementById('date').value=="select"){
+                document.getElementById('selecterror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('selecterror').innerText = "";
+            }
+            if(document.getElementById('time').value=="select"){
+                document.getElementById('selecterror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('selecterror').innerText = "";
+            }
+            if(document.getElementById('special-requests').value==""){
+                document.getElementById('texterror').innerText = "Can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('texterror').innerText = "";
+            }
+        }
+            </script>
+
+        </div> </center>
+    </div>
+
+    </main>
+    <footer> <p style="text-shadow: none;">&copy;2024|Our Resturant|All rights reserved.</p> 
+    </footer>
+</body>
+</html>
